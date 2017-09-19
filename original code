@@ -1,0 +1,46 @@
+noStroke();
+//starting postion of star
+var xPos = 200;
+var yPos = 200;
+
+draw = function() {
+    background(29, 40, 115);//background
+    
+//trail one behind star (the orange one)
+fill(250, 181, 20);
+beginShape();
+vertex(xPos, yPos);
+vertex(xPos+200, yPos-400);
+vertex(xPos+200, yPos-100);
+endShape(); 
+
+//trail two behind star (the yellow one)
+fill(255, 128, 0);
+beginShape();
+vertex(xPos+200, yPos-200);
+vertex(xPos, yPos);
+vertex(xPos+400, yPos-100);
+endShape(); 
+
+//drawing the star
+fill(255, 242, 0);
+beginShape();
+vertex(xPos, yPos);
+vertex(xPos-20, yPos-20);
+vertex(xPos, yPos-20);
+vertex(xPos+10, yPos-40);
+vertex(xPos+20, yPos-20);
+vertex(xPos+40, yPos-20);
+vertex(xPos+20, yPos);
+vertex(xPos+40, yPos+20);
+vertex(xPos+10, yPos+10);
+vertex(xPos-20, yPos+20);
+endShape(CLOSE);
+
+//moving the star diagonally accross the screen
+    xPos-= 1;
+    yPos+= 1;
+};
+
+
+
